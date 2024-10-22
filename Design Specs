@@ -1,2 +1,13 @@
 Das Frontpanel wird mit einer Folientastatur realisiert.
 Bedientelemente und Ausgaben werden mit einem Arduino Nano angesteuert
+Für die Digitalen Inputs ist einen Bus Expander vorgeschlagen:
+Für den Vigor brauche wir aktuell 9 Eingänge
+PCF8575 Remote16-BIT I 2C AND SMBus I/O Expander with Interrupt Output
+Input und Output Pins werden über I2C angesteuert.
+https://github.com/4-20ma/I2cDiscreteIoExpander
+Die z.Z. unbenutzten Eingänge stehen als Reserve zur Verfügnug.
+
+LED Ansteuerung 
+Beide werden auch via (2C angesteuert
+TTLC59284 
+STP16CPC26
