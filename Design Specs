@@ -8,6 +8,6 @@ https://github.com/4-20ma/I2cDiscreteIoExpander
 Die z.Z. unbenutzten Eingänge stehen als Reserve zur Verfügnug.
 
 LED Ansteuerung 
-Beide werden auch via (2C angesteuert
+Beide werden via (2C angesteuert
 TTLC59284 
 STP16CPC26
