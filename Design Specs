@@ -1,4 +1,4 @@
-Das Frontpanel wird mit einer Folientastatur realisiert.
+ Das Frontpanel wird mit einer Folientastatur realisiert.
 Bedientelemente und Ausgaben werden mit einem Arduino Nano angesteuert
 Für die Digitalen Inputs ist einen Bus Expander vorgeschlagen:
 Für den Vigor brauche wir aktuell 9 Eingänge
