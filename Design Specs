@@ -1,6 +1,0 @@
-Das Frontpanel wird mit einer Folientastatur realisiert.
-Bedientelemente und Ausgaben werden mit einem Arduino Nano angesteuert
-Für die Digitalen Inputs /Output wird 74HC4051 multipler
-
-Für den Vigor brauche wir aktuell 9 Eingänge und 7 LED  Ausgänge
-
