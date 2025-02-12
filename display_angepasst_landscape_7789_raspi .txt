@@ -1,0 +1,27 @@
+  
+https://github.com/gavinlyonsrepo/ST7789_TFT_RPI/blob/main/README.md
+
+
+curl -sL https://github.com/gavinlyonsrepo/ST7789_TFT_RPI/archive/1.0.2.tar.gz | tar xz
+
+
+~/ST7789_TFT_RPI-1.0.2 $ sudo make
+
+ sudo make install
+
+
+ST7789_TFT_RPI-1.0.2/examples $ make 
+
+CLEANUP!
+rm -rvf Build
+
+
+/ST7789_TFT_RPI-1.0.2/examples $ make run
+
+sudo Bin/test.out
+TFT Start Test 101 HW SPI 0
+ST7789 library version : 102
+bcm2835 library version :10071
+Hello World
+  
+ 
