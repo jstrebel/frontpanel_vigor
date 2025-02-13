@@ -1,0 +1,5 @@
+Verkabelung howag: Schemas nach denen Howag die Verkabelung herstellt
+Display Anschluss: PCB Verbindungen Display, Folientasten und LED Anzeigen in der Folientastatur
+Blockschaltbild: Vigor Bedienung und Regler
+Steuerbox: Raspi, und Arduino Display Kontroller
+Motor Regler: Steuerung der Linak Linarmotoren. Kommuniziert via CAN Bus mit der Steuerbox
