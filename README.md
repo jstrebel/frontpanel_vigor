@@ -1,6 +1,13 @@
 # vigor frontpanel mit Folientastatur.
 
-11 Feb
+Bedienung:  Entwurf der das Bedieninterface der Kotrollerbox erklärt
 
-Bem werde dieses Repository noch organisieren und aufräumen 
+Schemas:  
+
+Testcode:     Beispiel lesen der Tastatur input mit dem Arduino
+
+TFT display:  Für die Anzeigen wird ein gut Dokumentierte Library verwendet.
+
+
+BEM: werde dieses Repository weiter organisieren und aufräumen 
 
