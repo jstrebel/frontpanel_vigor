@@ -25,3 +25,8 @@ bcm2835 library version :10071
 Hello World
   
  
+ST7789_TFT_RPI-1.0.2/examples/st7789/Hello_world_HWSPI_0 
+
+ls -l
+-rw-r--r-- 1 jakob jakob 2824 Feb 17 16:56 main.cpp
+jakob@lcdtest:~/ST7789_TFT_RPI-1.0.2/examples/st7789/Hello_world_HWSPI_0 $
