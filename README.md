@@ -11,3 +11,5 @@ TFT display:  Für die Anzeigen wird ein gut Dokumentierte Library verwendet.
 
 BEM: werde dieses Repository weiter organisieren und aufräumen 
 
+Doku auf: https://github.com/gavinlyonsrepo/Display_Lib_RPI
+
