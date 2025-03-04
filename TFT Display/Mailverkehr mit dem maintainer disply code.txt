@@ -1,0 +1,173 @@
+MAIL Verkehr mit dem Maintainer des Display Codes:
+(chronlogie: Neueste am Anfang)
+
+Hi Gavin,
+I intend to use the ST7789_TFT_RPI lib. The lib you did for me.
+Is there a possibility to merge this into 2.0. Or should I stay with 1.3?
+Regards
+Jakob
+
+
+
+Am 23.12.2024 um 20:04 schrieb Gavin Lyons <glyons66@hotmail.com>:
+
+Hi 
+
+You are using Display_Lib_RPI not ST7789_TFT_RPI
+ST7789_TFT_RPI is  the library I wrote for you.
+
+The problem is:  that I upgraded 'Display_Lib_Rpi' from version 1.3.0 to Version 2.0.0. Last month.
+So it will work on all Linux based Single board computers Including  Raspberry pi 5.  
+'Display_Lib_Rpi'  version 2.0.0 may require a change to the 'spidev.bufsiz' setting  as specified in the st7789 readme.
+
+Do you want to use Display_lib_RPI OR St7789_TFT_RPI ?
+St7789_TFT_RPi is unchanged since last contact and should work fine.
+
+Regards 
+Am 23.11.2024 um 14:57 schrieb Gavin Lyons <glyons66@hotmail.com>:
+
+Hi 
+
+I have created a new version: 1.0.2 , which has support for hardware SPI-1 interface.
+There are 3 hello world examples (one for SPI-0 , SPI-1 and software SPI)
+The only difference is in setup*() function.
+ The difference between SPI-0 and SPI-1 is the number of parameters for TFTInitSPI() function.
+For SPI-1 there is no choice for CE pin.
+I have noticed the speed of SPI-1 is ~50% of SPI-0, I don't know reason why , its not my library, its the bcm2835 library or
+Raspberry pi configuration.
+Pins used are in README table. 
+I never used the SPI-1 before on any project.
+Regards
+From: Jakob Strebel <jkstrebel@gmail.com>
+Sent: Friday 22 November 2024 18:22
+To: Gavin Lyons <glyons66@hotmail.com>
+Subject: Re: Display Lib st7789 change to Landscape?
+ 
+
+Good evening Gavin,
+
+Thank you for the response. Because i am only displaying Text, I guess Software SPI could do the job, right?
+The Library as it is has NO option to use  SPI1 
+It needs to be changed to use 'bcm2835_aux_spi_*'  functions instead of the  'bcm2835_spi_*'  from bcm2835 dependency library.
+I have never used  'bcm2835_aux_spi_*' before but assuming it works it should be an easy job. 
+The library does support  software SPI , but this is 20 times slower than 8MhZ Hardware SPI, the advantage of software SPI is you can 
+Pick any GPIO you want. 
+I can add an option to use SPI1 OR show you how to do software SPI(its shown in hello world example , function = SetupSWSPI()) 
+
+This would be very helpful. 
+Regards Jakob
+
+
+regards
+   
+
+ 
+From: Jakob Strebel <jkstrebel@gmail.com>
+Sent: Thursday 21 November 2024 16:49
+To: Gavin Lyons <glyons66@hotmail.com>
+Subject: Re: Display Lib st7789 change to Landscape?
+ 
+Gavin,
+I hope you got the money. With Paypal the conversion from Swiss Francs, went to US$ and then to EU. This ist the reason for the odd value.
+
+As I confimed yesterday, all works. Thank you.
+
+Right now I am struggling because I need to move the display from the SPI 0 channel to SPI 1.
+I could you give me please give me a hint?
+Below the Actual pin Config which works. 
+Where do I make the all the changes to use SPI 1?
+
+Thank you Jakob
+
+
+<PastedGraphic-1.png>
+
+Am 20.11.2024 um 17:15 schrieb Gavin Lyons <glyons66@hotmail.com>:
+
+Hi 
+
+I have made a new library at https://github.com/gavinlyonsrepo/ST7789_TFT_RPI
+You can test it and see how it works.
+I think it will work for 240x320 but i am not certain.
+
+Regards
+
+
+  
+From: Jakob Strebel <jkstrebel@gmail.com>
+Sent: Tuesday 19 November 2024 16:37
+To: Gavin Lyons <glyons66@hotmail.com>
+Subject: Re: Display Lib st7789 change to Landscape?
+ 
+Hi Gavin,
+thank you for the quick response.
+
+So you want a ST7789 Library for Raspberry pi 3 or 4 written in C++, 240x320 Landscape mode.
+Yes
+
+
+Note ::
+I have a 240X280 display but the same code should work for 240x320.
+
+Lets give a try with this version. I guess to change it to 240x320 should not be a ig issue.
+
+
+The 'Display_Lib_RPI' library  does not work at present  with Raspberry pi 5 as the bcm2835 Library dependency its built on is not updated to work  on Raspberry pi 5.
+
+I am aware of this. I am using RP4 ad CM4 with bookworm. Never seen any problem between the two platforms.
+Regards Jakob
+
+
+
+
+regards
+ 
+From: Jakob Strebel <jkstrebel@gmail.com>
+Sent: Tuesday 19 November 2024 09:30
+To: Gavin Lyons <glyons66@hotmail.com>
+Subject: Re: Display Lib st7789 change to Landscape?
+ 
+Gavin,
+thank you for the response. The positive result lead me to ask you for some work.  I am able to pay a small amount for it.
+
+I am planning to build a small series of devices that will help farmers to reduce the need for fertilizer in order to conserve drinking water. Our aim is to provide around 20-30 farmers with a low-cost device next spring.
+We use a TFT display to show the operating status. 
+240x320 in landscape mode.
+I have discovered your Display_Lib_RPI library.
+could you please adapt this library for the ST7789v to:
+240x320 Landscape mode. Would this be possible for 100€
+Our project is also open source https://github.com/jaluebbe/vigor22
+
+Regards Jakob
+
+
+
+
+
+
+Am 17.11.2024 um 23:16 schrieb Gavin Lyons <glyons66@hotmail.com>:
+
+Hi 
+
+You can use command  TFTsetRotation(); to rotate the display.
+https://gavinlyonsrepo.github.io/misc/software_docs/Display_Lib_RPI/classST7789__TFT.html#ab29a6496c729048a238ed3321a084641
+
+See test 502 in example file Text_Graphics_Functions/main.cpp 
+you have to edit the examples/color16_displays/Makefile To SRC=st7789/Text_Graphics_Functions to run this test file. As per main README test section.
+ 
+
+
+regards.
+
+    
+From: Jakob Strebel <jkstrebel@gmail.com>
+Sent: Sunday 17 November 2024 13:39
+To: glyons66@hotmail.com <glyons66@hotmail.com>
+Subject: Display Lib st7789 change to Landscape?
+ 
+Gavin, great to see what you have done. Thank you for the good description. It helped me to make it run for a st7788 to display Text.
+
+I was searching in the code to find any hints how to change the text display from portrait to landscape mode.
+Could you please give me hints wherei can do this?
+
+Regards Jakob
