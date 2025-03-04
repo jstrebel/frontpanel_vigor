@@ -1,6 +1,7 @@
 MAIL Verkehr mit dem Maintainer des Display Codes:
 (chronlogie: Neueste am Anfang)
 
+
 Hi Gavin,
 I intend to use the ST7789_TFT_RPI lib. The lib you did for me.
 Is there a possibility to merge this into 2.0. Or should I stay with 1.3?
