@@ -1,0 +1,59 @@
+/Display_Lib_RPI-2.2.0
+Installieren 
+
+in home von pi
+pi@vigor:~ $ ls -l
+total 2684
+drwxr-xr-x 8 pi pi    4096 Mar 12 09:19 Display_Lib_RPI-2.2.0
+drwxr-xr-x 7 pi pi    4096 Mar 12 08:21 lg
+-rw-r--r-- 1 pi pi 2739152 May  3  2023 lg.zip
+
+
+wget http://abyz.me.uk/lg/lg.zip
+unzip lg.zip
+cd lg
+make
+sudo make install
+
+macht Fehler
+pi@vigor:~/lg $ sudo make install
+install -m 0644 lgpio.h                  /usr/local/include
+install -m 0644 rgpio.h                  /usr/local/include
+install -m 0755 liblgpio.so.1 /usr/local/lib
+install -m 0755 librgpio.so.1 /usr/local/lib
+install -m 0755 rgpiod                   /usr/local/bin
+install -m 0755 rgs                      /usr/local/bin
+install -m 0644 rgpiod.1                 /usr/local/man/man1
+install -m 0644 rgs.1                    /usr/local/man/man1
+install -m 0644 lgpio.3                  /usr/local/man/man3
+install -m 0644 rgpio.3                  /usr/local/man/man3
+ldconfig
+/usr/bin/python3
+Traceback (most recent call last):
+  File "/home/pi/lg/PY_RGPIO/setup.py", line 3, in <module>
+    from setuptools import setup
+ModuleNotFoundError: No module named 'setuptools'
+*** install of Python3 rgpio.py failed ***
+/usr/bin/python3
+
+
+sudo apt-get install python3-pip
+
+danach	 gehts
+
+cd Display_Lib_RPI-2.2.0
+make
+sudo make install
+
+cd examples
+# Edit the makefile in examples folder by picking the "SRC" file path you want to run
+
+/Display_Lib_RPI-2.2.0/examples $ make help
+Makefile:140: *** SRC example file path is not set, pick a SRC path in Section A, exiting nothing done.  Stop.
+
+# =============== ST7789 TFT LCD SPI =============
+
+SRC=st7789/Hello_world
+
+make
+make run
