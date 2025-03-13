@@ -13,6 +13,9 @@ Das ist der Code welcher der Entwickler für mich machte.
 Dieser Code ist mit dem Raspi 4 getestet.
 https://github.com/gavinlyonsrepo/ST7789_TFT_RPI/releases
 
+Gavin hat die Beschreibung upgedatet, Grund war, dass der code den wir verwenden eine andere Library verwendet.
+https://github.com/gavinlyonsrepo/ST7789_TFT_RPI
+
 BEM: werde dieses Repository weiter organisieren und aufräumen 
 
 
