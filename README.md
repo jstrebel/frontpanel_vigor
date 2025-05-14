@@ -20,3 +20,41 @@ BEM: werde dieses Repository weiter organisieren und aufräumen
 
 
 
+## Installationen im Raspi
+
+### bcm2835
+```
+curl -sL http://www.airspayce.com/mikem/bcm2835/bcm2835-1.75.tar.gz | tar xz
+./configure
+make
+sudo make check
+sudo make install
+```
+
+### redis 
+https://fleetstack.io/blog/redis-on-raspberry-pi-setup
+```
+sudo apt install redis-server -y
+```
+
+Falls wenig RAM Memorybegrenzung:
+```
+sudo nano /etc/redis/redis.conf
+maxmemory 100mb maxmemory-policy allkeys-lru
+```
+
+```
+sudo systemctl  enable  redis-server sudo systemctl start redis-server
+```
+
+Testen:
+```
+redis-cli
+set  testkey  "hello"
+get testkey
+```
+
+### hiredis
+```
+sudo apt-get install libhiredis-dev
+```
