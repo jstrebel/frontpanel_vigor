@@ -43,8 +43,10 @@ sudo nano /etc/redis/redis.conf
 maxmemory 100mb maxmemory-policy allkeys-lru
 ```
 
+Hinzufügen zum Autostart und starten von redis 
 ```
-sudo systemctl  enable  redis-server sudo systemctl start redis-server
+sudo systemctl  enable  redis-server
+sudo systemctl start redis-server
 ```
 
 Testen:
