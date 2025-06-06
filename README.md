@@ -17,6 +17,7 @@ Gavin hat die Beschreibung upgedatet, Grund war, dass der code den wir verwenden
 https://github.com/gavinlyonsrepo/ST7789_TFT_RPI
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 BEM: werde dieses Repository weiter organisieren und aufräumen 
 
 
@@ -61,6 +62,9 @@ get testkey
 ```
 sudo apt-get install libhiredis-dev
 ```
+=======
+BEM: Werde dieses Repository weiter organisieren und aufräumen
+>>>>>>> Stashed changes
 =======
 BEM: Werde dieses Repository weiter organisieren und aufräumen
 >>>>>>> Stashed changes
