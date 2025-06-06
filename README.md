@@ -2,20 +2,21 @@
 
 Bedienung:  Entwurf der das Bedieninterface der Kotrollerbox erklärt
 
-Schemas:  
+Schemas:
 
 Testcode:     Beispiel lesen der Tastatur input mit dem Arduino
 
 TFT display:  Für die Anzeigen wird ein gut Dokumentierte Library verwendet.
 Doku auf: https://github.com/gavinlyonsrepo/Display_Lib_RPI
 
-Das ist der Code welcher der Entwickler für mich machte. 
+Das ist der Code welcher der Entwickler für mich machte.
 Dieser Code ist mit dem Raspi 4 getestet.
 https://github.com/gavinlyonsrepo/ST7789_TFT_RPI/releases
 
 Gavin hat die Beschreibung upgedatet, Grund war, dass der code den wir verwenden eine andere Library verwendet.
 https://github.com/gavinlyonsrepo/ST7789_TFT_RPI
 
+<<<<<<< Updated upstream
 BEM: werde dieses Repository weiter organisieren und aufräumen 
 
 
@@ -60,3 +61,6 @@ get testkey
 ```
 sudo apt-get install libhiredis-dev
 ```
+=======
+BEM: Werde dieses Repository weiter organisieren und aufräumen
+>>>>>>> Stashed changes
