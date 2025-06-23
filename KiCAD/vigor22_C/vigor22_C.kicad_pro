@@ -6,7 +6,7 @@
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
-        "board_outline_line_width": 0.05,
+        "board_outline_line_width": 0.1,
         "copper_line_width": 0.2,
         "copper_text_italic": false,
         "copper_text_size_h": 1.5,
@@ -30,28 +30,34 @@
         "fab_text_size_v": 1.0,
         "fab_text_thickness": 0.15,
         "fab_text_upright": false,
-        "other_line_width": 0.1,
+        "other_line_width": 0.15,
         "other_text_italic": false,
         "other_text_size_h": 1.0,
         "other_text_size_v": 1.0,
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 1.1,
+          "height": 2.0,
+          "width": 1.905
         },
-        "silk_line_width": 0.1,
+        "silk_line_width": 0.15,
         "silk_text_italic": false,
         "silk_text_size_h": 1.0,
         "silk_text_size_v": 1.0,
-        "silk_text_thickness": 0.1,
+        "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.4
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -110,10 +116,10 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
-        "min_hole_clearance": 0.25,
+        "min_copper_edge_clearance": 0.0,
+        "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
@@ -121,10 +127,12 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
+        "min_through_hole_diameter": 0.25,
+        "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_via_diameter": 0.2,
+        "solder_mask_clearance": 0.0,
+        "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
@@ -171,7 +179,9 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -198,7 +208,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -439,10 +454,14 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "Connector_Generic_Shielded",
+      "Connector_PCB",
+      "Vigor22"
+    ]
   },
   "meta": {
-    "filename": "display_mit_raspiZ.kicad_pro",
+    "filename": "vigor22_C.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -459,11 +478,11 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
-        "schematic_color": "rgb(0, 194, 0)",
-        "track_width": 0.2,
-        "via_diameter": 0.6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
         "via_drill": 0.3,
-        "wire_width": 8
+        "wire_width": 9
       },
       {
         "bus_width": 12,
@@ -474,14 +493,14 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "GND",
+        "name": "HV1",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
-        "schematic_color": "rgb(0, 0, 255)",
-        "track_width": 0.2,
-        "via_diameter": 0.6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
         "via_drill": 0.3,
-        "wire_width": 20
+        "wire_width": 9
       },
       {
         "bus_width": 12,
@@ -492,14 +511,122 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "Power",
+        "name": "HV3",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
-        "schematic_color": "rgb(255, 0, 0)",
-        "track_width": 0.2,
-        "via_diameter": 0.6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
         "via_drill": 0.3,
-        "wire_width": 12
+        "wire_width": 9
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "LV1",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
+        "wire_width": 9
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "LV3",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
+        "wire_width": 9
+      },
+      {
+        "bus_width": 16,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "POWER",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.4,
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
+        "wire_width": 16
+      },
+      {
+        "bus_width": 16,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "POWER 10V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 5,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
+        "wire_width": 16
+      },
+      {
+        "bus_width": 16,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "POWER 12V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 6,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
+        "wire_width": 16
+      },
+      {
+        "bus_width": 16,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power 5V",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 7,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5,
+        "via_drill": 0.3,
+        "wire_width": 16
       }
     ],
     "meta": {
@@ -509,32 +636,32 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Power",
-        "pattern": "Power"
-      },
-      {
-        "netclass": "GND",
+        "netclass": "POWER",
         "pattern": "GND"
       },
       {
-        "netclass": "Power",
-        "pattern": "3.3V"
+        "netclass": "Power 5V",
+        "pattern": "5V"
       },
       {
-        "netclass": "Power",
+        "netclass": "POWER",
+        "pattern": "12V"
+      },
+      {
+        "netclass": "POWER",
         "pattern": "+5V"
       },
       {
-        "netclass": "Power",
-        "pattern": "Pi5V"
+        "netclass": "POWER",
+        "pattern": "+3.3V"
       },
       {
-        "netclass": "Power",
-        "pattern": "+10V"
-      },
-      {
-        "netclass": "Power",
+        "netclass": "POWER",
         "pattern": "+12V"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+10V"
       }
     ]
   },
@@ -542,10 +669,10 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
-      "plot": "../Deliverables/Gerber Files/",
-      "pos_files": "../Deliverables/Pick and place/",
-      "specctra_dsn": "",
+      "netlist": "vigor22_B.net",
+      "plot": "../Deliverables/Gerber/",
+      "pos_files": "../Deliverables/pick & place/",
+      "specctra_dsn": "vigor22_B.dsn",
       "step": "",
       "svg": "",
       "vrml": ""
@@ -585,25 +712,55 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
+          "show": false
+        },
+        {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Do Not Place",
+          "name": "${DNP}",
           "show": true
         },
         {
           "group_by": false,
-          "label": "Footprint",
-          "name": "Footprint",
+          "label": "Exclude from BOM",
+          "name": "${EXCLUDE_FROM_BOM}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Exclude from Board",
+          "name": "${EXCLUDE_FROM_BOARD}",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Exclude from Simulation",
+          "name": "${EXCLUDE_FROM_SIM}",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         },
         {
           "group_by": false,
           "label": "Qty",
           "name": "${QUANTITY}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "DNP",
-          "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -613,8 +770,8 @@
         },
         {
           "group_by": false,
-          "label": "Description",
-          "name": "Description",
+          "label": "Sim.Device",
+          "name": "Sim.Device",
           "show": false
         }
       ],
@@ -652,18 +809,20 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "",
+    "net_format_name": "KiCad",
     "ngspice": {
       "fix_include_paths": true,
+      "fix_passive_vals": false,
       "meta": {
         "version": 0
       },
-      "model_mode": 4,
+      "model_mode": 0,
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "space_save_all_events": true,
+    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -675,8 +834,12 @@
   },
   "sheets": [
     [
-      "2f746dec-9511-49d2-bd62-bfdb7eb5ce75",
+      "e8a30e4f-deae-484e-8a75-bf5707612a43",
       "Root"
+    ],
+    [
+      "e6c4212f-3da6-4e8a-b9ee-2cd34f5021ab",
+      "H-Bridge Ansteuerung"
     ]
   ],
   "text_variables": {}
